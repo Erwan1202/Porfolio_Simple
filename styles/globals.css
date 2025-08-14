@@ -3,7 +3,9 @@
 html,body{height:100%}
 body{
   margin:0;
-  background:var(--bg);
+  background: radial-gradient(1200px 600px at 10% -10%, rgba(100,255,218,.08), transparent 60%),
+              radial-gradient(900px 500px at 110% 10%, rgba(138,180,255,.05), transparent 60%),
+              linear-gradient(180deg, #0b0f14 0%, #0a0e13 100%);
   color:var(--text);
   font-family:var(--font-sans);
   line-height:1.6;
@@ -17,7 +19,18 @@ a:hover{text-decoration:underline}
 
 /* Utilitaires */
 .container{max-width:var(--maxw);margin-inline:auto;padding:0 var(--space-4)}
-.section{padding: clamp(64px, 8vw, 120px) 0}
+
+.section{
+  padding: clamp(64px, 8vw, 110px) 0;
+  position: relative;
+}
+.section::after{
+  content:""; position:absolute; left:0; right:0; bottom:0; height:1px;
+  background: linear-gradient(90deg, transparent, var(--border), transparent);
+  opacity:.7;
+}
+.section:last-of-type::after{ display:none; }
+
 .skip-link{
   position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden
 }

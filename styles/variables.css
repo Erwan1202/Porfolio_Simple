@@ -1,18 +1,31 @@
 :root{
-  /* Couleurs */
+  /* Couleurs thème (dark) */
   --bg: #0b0f14;
-  --bg-soft: #11161d;
+  --bg-soft: #101720;
+  --surface: #0f1721;           /* surfaces cartes/sections */
   --text: #e6edf3;
   --muted: #9aa7b2;
   --brand: #64ffda;
-  --border: #22303d;
+  --brand-2: #8ab4ff;           /* accent secondaire */
+  --border: #203040;
+
+  /* Ombres (élévation) */
+  --shadow-1: 0 6px 16px rgba(0,0,0,.28);
+  --shadow-2: 0 10px 30px rgba(0,0,0,.35);
 
   /* Typo */
-  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Inter, Roboto, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 
-  /* Rythme */
-  --radius: 12px;
+  /* Taille fluides */
+  --fs-xs: clamp(12px, 1.1vw, 13px);
+  --fs-sm: clamp(14px, 1.2vw, 15px);
+  --fs-md: clamp(16px, 1.6vw, 18px);
+  --fs-lg: clamp(20px, 2.4vw, 24px);
+  --fs-xl: clamp(28px, 4.2vw, 42px);
+
+  /* Rythme / rayons */
+  --radius: 14px;
   --space-1: 8px;
   --space-2: 12px;
   --space-3: 16px;

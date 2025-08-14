@@ -1,14 +1,14 @@
 .site-header{
   position:sticky; top:0; z-index:50;
-  backdrop-filter:saturate(180%) blur(10px);
-  background: color-mix(in oklab, var(--bg) 92%, transparent);
-  border-bottom:1px solid var(--border);
+  border-bottom:1px solid color-mix(in oklab, var(--border) 80%, transparent);
+  background: color-mix(in oklab, var(--bg) 82%, transparent);
+  backdrop-filter: blur(10px) saturate(140%);
 }
 .site-header .container{
   display:flex; align-items:center; justify-content:space-between;
   height:64px;
 }
-.brand{font-weight:700;letter-spacing:.3px}
+.brand{ font-weight:800; letter-spacing:.3px }
 .nav{display:flex; gap: clamp(12px, 3vw, 28px); list-style:none; margin:0; padding:0}
 .nav a{color:var(--muted)}
 .nav a:hover{color:var(--text);text-decoration:none}
@@ -20,8 +20,9 @@
   font-size:.95rem;
 }
 
+.site-header .container{ height:68px; transition: height .2s ease; }
 .site-header.scrolled .container{ height:56px; }
-.site-header .container{ transition: height .2s ease; }
+.brand{ font-weight:800; letter-spacing:.3px }
 .nav a.is-active{ color: var(--text); position: relative; }
 .nav a.is-active::after{
   content:""; position:absolute; left:0; right:0; bottom:-8px; height:2px;
