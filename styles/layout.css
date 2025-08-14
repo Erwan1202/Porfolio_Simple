@@ -1,31 +1,111 @@
+/* Header fixé en haut */
 .site-header{
-  position:sticky; top:0; z-index:50;
+  position: fixed; top:0; left:0; right:0; z-index:200;
   border-bottom:1px solid color-mix(in oklab, var(--border) 80%, transparent);
   background: color-mix(in oklab, var(--bg) 82%, transparent);
   backdrop-filter: blur(10px) saturate(140%);
 }
-.site-header .container{
-  display:flex; align-items:center; justify-content:space-between;
-  height:64px;
-}
-.brand{ font-weight:800; letter-spacing:.3px }
-.nav{display:flex; gap: clamp(12px, 3vw, 28px); list-style:none; margin:0; padding:0}
-.nav a{color:var(--muted)}
-.nav a:hover{color:var(--text);text-decoration:none}
+.site-header .container{ display:flex; align-items:center; height: 68px; transition: height .2s ease; }
+.site-header.scrolled .container{ height: 56px; }
 
-.site-footer{
-  border-top:1px solid var(--border);
-  padding: var(--space-6) 0;
-  color:var(--muted);
-  font-size:.95rem;
+/* Décaler le contenu pour ne pas passer sous le header */
+main{ padding-top: 68px; }
+
+/* Nav desktop */
+.nav{
+  display:flex;
+  gap: clamp(12px, 3vw, 28px);
+  list-style:none; margin:0; padding:0;
+}
+.nav a{ color: var(--muted); }
+.nav a:hover{ color: var(--text); text-decoration:none; }
+.brand{ font-weight:800; letter-spacing:.3px }
+
+.nav--desktop{
+  display: flex;
+  align-items: center;
+  gap: clamp(12px, 3vw, 28px);
+  flex-wrap: nowrap;             /* ← empêche le retour à la ligne */
+  white-space: nowrap;           /* ← évite la césure des étiquettes */
+  margin-left: auto;             /* push à droite (optionnel si space-between) */
 }
 
-.site-header .container{ height:68px; transition: height .2s ease; }
-.site-header.scrolled .container{ height:56px; }
-.brand{ font-weight:800; letter-spacing:.3px }
+
+/* État actif (desktop) */
 .nav a.is-active{ color: var(--text); position: relative; }
 .nav a.is-active::after{
   content:""; position:absolute; left:0; right:0; bottom:-8px; height:2px;
   background: var(--brand);
   border-radius: 2px;
+}
+
+/* Bouton burger */
+.nav-toggle{
+  display:none;
+  width:40px; height:40px;
+  border:1px solid var(--border);
+  border-radius:10px;
+  background: var(--surface); /* opaque */
+  align-items:center; justify-content:center; gap:4px;
+}
+.nav-toggle__bar{ width:18px; height:2px; background: var(--text); display:block; border-radius:2px; }
+
+
+/* Panneau mobile par défaut */
+.nav-panel{ display:none; }
+.nav-backdrop{ display:none; }
+
+/* ----- Mobile ----- */
+@media (max-width: 899px){
+  .nav-toggle{ display:inline-flex; }
+
+  /* On cache la nav horizontale uniquement */
+  .nav--desktop{ display:none; }
+
+  /* Panneau latéral mobile – OPAQUE */
+  .nav-panel{
+    display:block;
+    position: fixed;
+    top: 68px; right: 0; bottom: 0; left: auto;
+    width: min(82vw, 360px);
+    transform: translateX(100%);
+    transition: transform .25s ease;
+    background: var(--bg);           /* ← opaque */
+    border-left: 1px solid var(--border);
+    box-shadow: var(--shadow-2);
+    z-index: 180;
+  }
+  .nav-panel .nav{
+    display:flex; flex-direction:column; gap: 0; padding: 8px 0; margin:0;
+  }
+  .nav-panel .nav a{
+    display:block; padding: 14px 18px; color: var(--text); background-color: black;
+  }
+  .nav-panel .nav a:hover{
+    background: color-mix(in oklab, var(--brand) 9%, transparent);
+    text-decoration:none;
+  }
+
+  /* Fond (backdrop) un peu plus sombre */
+  .nav-backdrop{
+    display:block;
+    position:fixed; inset:0;
+    background: rgba(0,0,0,.6);      /* ← plus opaque */
+    opacity:0; pointer-events:none; transition: opacity .25s ease;
+    z-index: 160;
+  }
+
+  /* État ouvert */
+  .site-header[data-open="true"] .nav-panel{ transform: translateX(0); }
+  .nav-open body{ overflow:hidden; }
+  .nav-open .nav-backdrop{ opacity:1; pointer-events:auto; }
+}
+
+
+/* Footer */
+.site-footer{
+  border-top:1px solid var(--border);
+  padding: var(--space-6) 0;
+  color:var(--muted);
+  font-size:.95rem;
 }
