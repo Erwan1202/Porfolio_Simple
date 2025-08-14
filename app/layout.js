@@ -4,6 +4,8 @@ import '../styles/globals.css';
 import '../styles/layout.css';
 import '../styles/components.css';
 
+import Enhancements from "@/components/Enchancements"
+
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 
@@ -17,11 +19,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="fr">
       <body>
-        <a className="skip-link" href="#contenu">Aller au contenu</a>
-        <Header />
-        <main id="contenu">{children}</main>
-        <Footer />
-      </body>
+  <a className="skip-link" href="#contenu">Aller au contenu</a>
+  <Header />
+  <main id="contenu">{children}</main>
+  <Footer />
+  <Enhancements />
+</body>
     </html>
   );
 }
