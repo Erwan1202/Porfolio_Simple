@@ -287,3 +287,14 @@
   background: color-mix(in oklab, var(--bg-soft) 50%, transparent);
 }
 .social:hover{ color: var(--text); text-decoration: none; }
+
+
+/* Révélation progressive des sections */
+.reveal{ opacity: 0; transform: translateY(16px); }
+.reveal.is-visible{ 
+  opacity: 1; transform: none; 
+  transition: opacity .5s ease, transform .5s ease;
+}
+@media (prefers-reduced-motion: reduce){
+  .reveal, .reveal.is-visible{ opacity:1; transform:none; transition:none; }
+}

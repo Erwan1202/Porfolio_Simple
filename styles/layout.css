@@ -19,3 +19,12 @@
   color:var(--muted);
   font-size:.95rem;
 }
+
+.site-header.scrolled .container{ height:56px; }
+.site-header .container{ transition: height .2s ease; }
+.nav a.is-active{ color: var(--text); position: relative; }
+.nav a.is-active::after{
+  content:""; position:absolute; left:0; right:0; bottom:-8px; height:2px;
+  background: var(--brand);
+  border-radius: 2px;
+}

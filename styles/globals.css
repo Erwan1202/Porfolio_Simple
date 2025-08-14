@@ -24,3 +24,11 @@ a:hover{text-decoration:underline}
 .skip-link:focus{
   position:fixed;left:var(--space-4);top:var(--space-4);width:auto;height:auto;padding:8px 12px;background:var(--bg-soft);border:1px solid var(--border);border-radius:8px;z-index:1000
 }
+
+
+html { scroll-behavior: smooth; }
+.section { scroll-margin-top: 84px; } 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
