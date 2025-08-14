@@ -106,3 +106,68 @@
   font-family: var(--font-mono);
   font-size: .95rem;
 }
+
+/* ===== Timeline ===== */
+.timeline{
+  position: relative;
+  margin: 0;
+  padding: 0 0 0 28px;
+  list-style: none;
+}
+.timeline::before{
+  content:"";
+  position:absolute; left:12px; top:0; bottom:0;
+  width:2px; background: var(--border);
+}
+.timeline__item{
+  position:relative;
+  padding-left: 0;
+  margin: 0 0 var(--space-6);
+}
+.timeline__marker{
+  position:absolute; left:-2px; top:.4rem;
+  width:12px; height:12px; border-radius:50%;
+  background: var(--brand);
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--brand) 20%, transparent);
+}
+.timeline__content{
+  background: linear-gradient(180deg, color-mix(in oklab, var(--bg-soft) 80%, transparent), transparent);
+  border:1px solid var(--border);
+  border-radius: 12px;
+  padding: var(--space-4);
+}
+
+/* Header/meta */
+.exp__role{ margin:0 0 var(--space-2); font-size: clamp(18px, 2.6vw, 22px); }
+.exp__role .at{ color: var(--brand); font-weight:600; }
+.exp__meta{ color: var(--muted); font-size: .95rem; margin-bottom: var(--space-3); }
+.exp__location{ white-space: nowrap; }
+
+/* Bullets */
+.exp__bullets{
+  margin: 0 0 var(--space-3); padding-left: 1.1rem;
+  display:grid; gap: .35rem;
+}
+.exp__bullets li{ list-style: disc; }
+
+/* Tags */
+.exp__tags{
+  display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; list-style:none;
+}
+.tag{
+  padding: 4px 10px;
+  border:1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--brand) 8%, transparent);
+  color: color-mix(in oklab, var(--brand) 25%, var(--text));
+  font-family: var(--font-mono);
+  font-size: .9rem;
+}
+
+/* Layout tweak on wide */
+@media (width >= 900px){
+  .timeline{ padding-left: 36px; }
+  .timeline::before{ left:16px; }
+  .timeline__marker{ left:10px; }
+  .timeline__content{ padding: 22px 24px; }
+}
