@@ -171,3 +171,79 @@
   .timeline__marker{ left:10px; }
   .timeline__content{ padding: 22px 24px; }
 }
+
+
+/* ===== Projects grid ===== */
+.projects__grid{
+  display: grid;
+  gap: clamp(16px, 3vw, 28px);
+  grid-template-columns: 1fr;
+}
+@media (width >= 720px){
+  .projects__grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===== Card ===== */
+.card{
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(180deg, color-mix(in oklab, var(--bg-soft) 70%, transparent), transparent);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+.card:hover{
+  transform: translateY(-2px);
+  border-color: color-mix(in oklab, var(--brand) 40%, var(--border));
+  box-shadow: 0 6px 20px rgba(0,0,0,.25);
+}
+
+/* Clickable overlay to make the whole card a link */
+.card__link{
+  position:absolute; inset:0; z-index:1;
+}
+
+/* Media */
+.card__media{
+  aspect-ratio: 16/9;
+  background: #0f141a;
+  border-bottom: 1px solid var(--border);
+}
+.card__media img{
+  width:100%; height:100%; object-fit: cover;
+}
+
+/* Content */
+.card__content{ padding: 16px 16px 18px; display:grid; gap: 12px; }
+.card__header{ display:flex; align-items:baseline; justify-content:space-between; gap:12px; }
+.card__title{ margin:0; font-size: clamp(18px, 2.3vw, 21px); }
+.card__year{ color: var(--muted); font-size: .95rem; }
+.card__summary{ margin:0; color: var(--muted); }
+
+/* Tags */
+.card__tags{ display:flex; flex-wrap:wrap; gap:8px; margin:0; padding:0; list-style:none; }
+.chip{
+  padding: 4px 10px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--brand) 8%, transparent);
+  color: color-mix(in oklab, var(--brand) 25%, var(--text));
+  font-family: var(--font-mono);
+  font-size: .9rem;
+}
+
+/* Actions */
+.card__actions{ display:flex; gap: 10px; margin-top: 4px; }
+.ext-link{
+  position: relative;
+  z-index: 2; /* above overlay */
+  display:inline-block; padding: 8px 12px;
+  border:1px solid var(--border);
+  border-radius: 10px;
+  color: var(--brand);
+}
+.ext-link:hover{ background: color-mix(in oklab, var(--brand) 12%, transparent); text-decoration:none; }
