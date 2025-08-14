@@ -247,3 +247,43 @@
   color: var(--brand);
 }
 .ext-link:hover{ background: color-mix(in oklab, var(--brand) 12%, transparent); text-decoration:none; }
+
+
+/* ===== Contact ===== */
+.contact__inner{
+  display:grid; gap: var(--space-4);
+  max-width: 760px;
+}
+.contact__text{
+  color: var(--muted);
+  margin: 0;
+}
+.contact__cta{
+  display:flex; gap: var(--space-3); flex-wrap: wrap;
+}
+
+.contact__email{
+  margin-top: 4px;
+}
+.contact__email__code{
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: color-mix(in oklab, var(--bg-soft) 60%, transparent);
+  display:inline-block;
+  font-family: var(--font-mono);
+  user-select: all;
+}
+
+/* Réseaux */
+.socials{
+  display:flex; gap: 16px; flex-wrap: wrap;
+  list-style: none; margin: var(--space-3) 0 0; padding: 0;
+}
+.social{
+  display:inline-flex; align-items:center; gap: 8px;
+  color: var(--muted); border:1px solid var(--border);
+  border-radius: 10px; padding: 8px 12px;
+  background: color-mix(in oklab, var(--bg-soft) 50%, transparent);
+}
+.social:hover{ color: var(--text); text-decoration: none; }
