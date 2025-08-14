@@ -1,0 +1,23 @@
+:root{
+  /* Couleurs */
+  --bg: #0b0f14;
+  --bg-soft: #11161d;
+  --text: #e6edf3;
+  --muted: #9aa7b2;
+  --brand: #64ffda;
+  --border: #22303d;
+
+  /* Typo */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+
+  /* Rythme */
+  --radius: 12px;
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-6: 32px;
+  --space-8: 48px;
+  --maxw: 1100px;
+}

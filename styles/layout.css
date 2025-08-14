@@ -1,0 +1,21 @@
+.site-header{
+  position:sticky; top:0; z-index:50;
+  backdrop-filter:saturate(180%) blur(10px);
+  background: color-mix(in oklab, var(--bg) 92%, transparent);
+  border-bottom:1px solid var(--border);
+}
+.site-header .container{
+  display:flex; align-items:center; justify-content:space-between;
+  height:64px;
+}
+.brand{font-weight:700;letter-spacing:.3px}
+.nav{display:flex; gap: clamp(12px, 3vw, 28px); list-style:none; margin:0; padding:0}
+.nav a{color:var(--muted)}
+.nav a:hover{color:var(--text);text-decoration:none}
+
+.site-footer{
+  border-top:1px solid var(--border);
+  padding: var(--space-6) 0;
+  color:var(--muted);
+  font-size:.95rem;
+}
