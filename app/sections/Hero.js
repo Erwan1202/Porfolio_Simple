@@ -4,7 +4,7 @@ export default function HomePage() {
     <>
       <section id="hero" className="section hero">
         <div className="container">
-          <p className="eyebrow">Ingénieur & Développeur web</p>
+          <p className="eyebrow">Etudiant Développeur web et Application</p>
           <h1 className="hero__title">
             Salut, moi c’est Erwan. <span className="accent">Je construis des interfaces propres</span> et des APIs fiables.
           </h1>
