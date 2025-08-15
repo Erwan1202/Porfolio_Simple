@@ -1,7 +1,7 @@
 // src/data/profile.js
 export const profile = {
     name: "Erwan Maréchal",
-    role: "Développeur Web · Full-Stack JS",
+    role: " Apprenti Développeur Web et Application",
     location: "Villejuif (94800), France",
     email: "erwan.a.marechal@gmail.com",
     availability: "Recherche une alternance à partir de septembre / octobre",
