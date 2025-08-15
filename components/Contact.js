@@ -77,17 +77,3 @@ function GitHubIcon(){
     </svg>
   );
 }
-function LinkedInIcon(){
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="currentColor" d="M6.94 7.5a1.94 1.94 0 1 1 0-3.88 1.94 1.94 0 0 1 0 3.88zM4.5 8.94h4.87V21H4.5zM13.12 8.94h4.66v1.64h.07c.65-1.16 2.23-2.39 4.58-2.39 4.89 0 5.79 3.22 5.79 7.41V21h-4.87v-4.6c0-1.1-.02-2.52-1.53-2.52-1.53 0-1.77 1.2-1.77 2.44V21h-4.93z"/>
-    </svg>
-  );
-}
-function XIcon(){
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" aria-hidden="true">
-      <path fill="currentColor" d="M18.9 2H22l-7.03 8.03L23.5 22h-6.87l-5.38-6.48L5 22H2l7.5-8.56L.5 2h6.98l4.86 5.9L18.9 2zM16.8 20h2.04L7.3 4H5.2l11.6 16z"/>
-    </svg>
-  );
-}
