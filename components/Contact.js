@@ -62,20 +62,7 @@ export default function Contact() {
               </a>
             </li>
           )}
-          {links.linkedin && (
-            <li>
-              <a href={links.linkedin} target="_blank" rel="noopener" className="social">
-                {LinkedInIcon()} <span>LinkedIn</span>
-              </a>
-            </li>
-          )}
-          {links.x && (
-            <li>
-              <a href={links.x} target="_blank" rel="noopener" className="social">
-                {XIcon()} <span>X</span>
-              </a>
-            </li>
-          )}
+        
         </ul>
       </div>
     </section>
