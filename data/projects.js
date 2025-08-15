@@ -15,5 +15,20 @@ export const projects = [
       repo: "https://github.com/Erwan1202/physarum"
     }
   },
+
+  {
+    slug: "Momentia",
+    title: "Momentia - Instagram be-like",
+    year: "2025",
+    summary: "prout",
+    tags: ["JavaScript", "HTML", "CSS", "React", "Redux"],
+    image: "/img/momentia.png",
+    width: 1300,
+    height: 1000,
+    links: {
+      demo: "https://momentia.vercel.app/",
+      repo: "https://github.com/Erwan1202/momentia"
+    }
+  }
   
 ];
