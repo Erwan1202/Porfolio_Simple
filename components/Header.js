@@ -15,7 +15,7 @@ export default function Header() {
   return (
     <header className="site-header" role="banner" data-open={open ? "true" : "false"}>
       <nav className="container" aria-label="Navigation principale">
-        <a href="#hero" className="brand">Erwan</a>
+        <a href="#hero" className="brand">Le meilleur portfolio que vous ayez vu ;)</a>
 
         {/* NAV DESKTOP */}
         <ul className="nav nav--desktop">

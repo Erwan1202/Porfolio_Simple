@@ -16,31 +16,18 @@ export const projects = [
     }
   },
   {
-    slug: "chat-terminal",
-    title: "Chat Terminal — Client OpenAI en Java",
+    slug: "Physarum",
+    title: "Battle Grid: Physarum - Un jeu de stratégie au tour par tour",
     year: "2025",
-    summary:
-      "Appli Java pour chatter en ligne de commande (profil, historique, sélection de modèle, mode offline de test).",
-    tags: ["Java", "OpenAI API", "CLI"],
-    image: "/projects/chat-terminal.webp",
+    summary: "Battle Grid: Physarum est un jeu de stratégie au tour par tour dans lequel vous incarnez un organisme intelligent de type Physarum. Déployez-vous sur une carte, construisez des bases, gérez votre énergie et affrontez des bots adaptatifs pour dominer la grille.",
+    tags: ["JavaScript", "TailwindCSS", "HTML", "React", "Zustand", "Vite", "Vercel"],
+    image: "/img/Physarum.png",
     width: 1200,
     height: 800,
     links: {
-      repo: "https://github.com/Erwan1202/chat-terminal"
-    }
-  },
-  {
-    slug: "modu-sol",
-    title: "ModuSol — SaaS modulaire PME",
-    year: "2025",
-    summary:
-      "Plateforme où les PME activent des modules à la carte (e-commerce, parrainage…). Dashboard, provisioning, suivi.",
-    tags: ["React", "Firebase", "Firestore", "Vercel"],
-    image: "/projects/modusol.webp",
-    width: 1200,
-    height: 800,
-    links: {
-      demo: "https://example.com/modusol"
+      demo: "https://physarum-five.vercel.app/",
+      repo: "https://github.com/Erwan1202/physarum"
     }
   }
+  
 ];
